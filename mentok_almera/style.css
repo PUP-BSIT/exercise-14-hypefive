@@ -22,7 +22,7 @@ h2 {
   border-bottom: 5px solid deeppink;
   padding: 10px 70px;
   color: black;
-  border-radius: 40px 40px;
+  border-radius: 40px;
   font-size: 30px;
 }
 
@@ -35,7 +35,7 @@ ol {
   border-bottom: 5px solid hotpink;
   color: deeppink;
   padding: 30px;
-  border-radius: 40px 40px 40px 40px;
+  border-radius: 40px;
 }
 
 li {
@@ -49,7 +49,7 @@ p {
   border: 3px solid hotpink;
   color: black;
   padding: 10px;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 20px;
 }
 
 a {

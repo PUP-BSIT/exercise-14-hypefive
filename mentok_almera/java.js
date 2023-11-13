@@ -11,7 +11,7 @@ function validateForm() {
     let nameValue = commenterName.value.trim();
     let commentValue = commenterText.value.trim();
 
-    if (nameValue !== '' && commentValue !== '') {
+    if (nameValue && commentValue) {
         commentButton.disabled = false;
     } else {
         commentButton.disabled = true;
