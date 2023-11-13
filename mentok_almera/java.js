@@ -2,6 +2,7 @@ let commenterName = document.getElementById("commenter_name");
 let commenterText = document.getElementById("comment_text");
 let commentButton = document.getElementById("comment_button");
 let commentList = document.getElementById("data_list");
+
 let commentsArray = [];
 
 commenterName.addEventListener("input", validateForm);
