@@ -107,8 +107,7 @@
         <h3>Pattern by: Xuxu Crochet on YouTube</h3>
         <h3>Yarn Color: White, Black, Yellow, Green (Optional)</h3>
         <a href="#"
-          ><button class="btn"><b>View Project</b></button></a
-        >
+          ><button class="btn"><b>View Project</b></button></a>
       </div>
     </div>
 
@@ -299,8 +298,7 @@
           id="name"
           placeholder="Name"
           oninput="newComment()"
-          class="name-box"
-        />
+          class="name-box"/>
         <textarea
           id="user_comment"
           placeholder="Add Comment"
@@ -312,9 +310,20 @@
           id="comment_btn"
           disabled
           class="btn-comment"
-          onclick="addComment()"
-        >
-          Comment
+          onclick="addComment()">
+            Comment
+        </button>
+        <button 
+          type="button" 
+          id="ascending" 
+          onclick="ascendingOrder()">
+            Sort Ascending
+        </button>
+        <button 
+          type="button" 
+          id="descending" 
+          onclick="descendingOrder()">
+            Sort Descending
         </button>
       </form>
     </div>
