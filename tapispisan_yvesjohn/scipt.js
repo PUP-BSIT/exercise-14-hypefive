@@ -8,8 +8,8 @@ let sortDscndButton = document.getElementById("sort_descending");
 nameInput.addEventListener('input', validateForm);
 commentInput.addEventListener('input', validateForm);
 addCommentButton.addEventListener('click', addComment);
-sortAscndButton.addEventListener('click', () => sortComments('asc'));
-sortDscndButton.addEventListener('click', () => sortComments('desc'));
+sortAscndButton.addEventListener('click', sortAscending);
+sortDscndButton.addEventListener('click', sortDescending);
 
 function validateForm() {
     let commentButton= document.getElementById("comment_button");
@@ -29,7 +29,7 @@ function addComment() {
     let addName = nameInput.value.trim();
     let addComment = commentInput.value.trim();
 
-    if (addName && addComment){
+    if (addName && addComment) {
         let commentItem = document.createElement("p");
         let currentDate = new Date();
         let dateString = currentDate.toLocaleString();
@@ -39,6 +39,14 @@ function addComment() {
         addName = "";
         addComment = "";
     }
+}
+
+function sortAscending() {
+    sortComments('asc');
+}
+
+function sortDescending() {
+    sortComments('desc');
 }
 
 function sortComments(order) {
