@@ -100,7 +100,7 @@
         <li>Mentally Stable</li>
       </ol>
       <h2>Comments</h2>
-      <div class="background" id="data_list">
+      <div class="background">
         <p>
           April - I'm constantly amazed by your determination and resilience in
           pursuing your goals. Your journey is an inspiration to us all.
@@ -115,20 +115,27 @@
         </p>
         <p>Yves - I admire the clarity with which you've set your goals.</p>
       </div>
+      <div class="background" id="data_list"></div>
       <form id="data_form">
         <div class="background">
-            <div>
-                <label for="commenter_name">Name: </label>
-                <input type="text" id="commenter_name" />
-            </div>
-            <div>
-                <label for="comment_text">Comment: </label>
-                <textarea id="comment_text" rows="4"></textarea>
-            </div>
-            <button type="button" id="comment_button">Comment</button>
+          <div>
+            <label for="commenter_name">Name: </label>
+            <input type="text" id="commenter_name" />
+          </div>
+          <div>
+            <label for="comment_text">Comment: </label>
+            <textarea id="comment_text" rows="4"></textarea>
+          </div>
+          <button type="button" id="comment_button">Comment</button>
+          <button type="button" onclick="sortCommentsAscending()">
+            Sort Ascending
+          </button>
+          <button type="button" onclick="sortCommentsDescending()">
+            Sort Descending
+          </button>
         </div>
-        <script src="java.js"></script>
-    </form>    
+      </form>
     </div>
+    <script src="java.js"></script>
   </body>
 </html>
