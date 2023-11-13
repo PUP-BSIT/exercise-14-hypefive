@@ -2,7 +2,7 @@ let nameField = document.getElementById("name");
 let commentField = document.getElementById("user_comment");
 
 function newComment() {
-  if (nameField.value.length > 0 && commentField.value.length > 0) {
+  if (nameField.value.length && commentField.value.length) {
     document.getElementById("comment_btn").disabled = false;
   } else {
     document.getElementById("comment_btn").disabled = true;
