@@ -241,56 +241,60 @@
         </div>
       </div>
 
-      <div class="user-comment-container">
-        <h1>COMMENT SECTION</h1>
-        <div class="comment">
-          <div class="user-info">
-            <img src="images/defaultprofile.png" alt="User 1" />
-            <div class="name-info">
-              <h3 class="name">Almera</h3>
-              <p class="username">@skhy</p>
+      <div class="all-comments-container">
+        <div class="user-comment-container">
+          <h1>COMMENT SECTION</h1>
+          <div class="comment">
+            <div class="user-info">
+              <img src="images/defaultprofile.png" alt="User 1" />
+              <div class="name-info">
+                <h3 class="name">Almera</h3>
+                <p class="username">@skhy</p>
+              </div>
             </div>
+            <p class="user-comment">
+              Go for those goals, Ate Joy! Your hard work will pay off.
+            </p>
           </div>
-          <p class="user-comment">
-            Go for those goals, Ate Joy! Your hard work will pay off.
-          </p>
-        </div>
-        <div class="comment">
-          <div class="user-info">
-            <img src="images/defaultprofile.png" />
-            <div class="name-info">
-              <h3 class="name">Diana</h3>
-              <p class="username">@diana</p>
+          <div class="comment">
+            <div class="user-info">
+              <img src="images/defaultprofile.png" />
+              <div class="name-info">
+                <h3 class="name">Diana</h3>
+                <p class="username">@diana</p>
+              </div>
             </div>
+            <p class="user-comment">
+              You've got some awesome goals, my friend! Can't wait to see you
+              crush them!
+            </p>
           </div>
-          <p class="user-comment">
-            You've got some awesome goals, my friend! Can't wait to see you
-            crush them!
-          </p>
-        </div>
-        <div class="comment">
-          <div class="user-info">
-            <img src="images/defaultprofile.png" />
-            <div class="name-info">
-              <h3 class="name">Bradley</h3>
-              <p class="username">@bradley</p>
+          <div class="comment">
+            <div class="user-info">
+              <img src="images/defaultprofile.png" />
+              <div class="name-info">
+                <h3 class="name">Bradley</h3>
+                <p class="username">@bradley</p>
+              </div>
             </div>
+            <p class="user-comment">
+              Dream it, work for it, and watch it become your reality.
+            </p>
           </div>
-          <p class="user-comment">
-            Dream it, work for it, and watch it become your reality.
-          </p>
-        </div>
-        <div class="comment">
-          <div class="user-info">
-            <img src="images/defaultprofile.png" />
-            <div class="name-info">
-              <h3 class="name">Yves</h3>
-              <p class="username">@yvesss</p>
+          <div class="comment">
+            <div class="user-info">
+              <img src="images/defaultprofile.png" />
+              <div class="name-info">
+                <h3 class="name">Yves</h3>
+                <p class="username">@yvesss</p>
+              </div>
             </div>
+            <p class="user-comment">
+              Your enthusiasm for your goals is contagious!
+            </p>
           </div>
-          <p class="user-comment">
-            Your enthusiasm for your goals is contagious!
-          </p>
+          <h1>NEWEST COMMENTS</h1>
+          <div class="new-user-comment-container"></div>
         </div>
       </div>
 
@@ -317,17 +321,21 @@
               ></textarea>
             </div>
 
-            <button
-              id="comment_button"
-              disabled="true"
-              onclick="submitComment()"
-            >
+            <button id="comment_button" disabled onclick="submitComment()">
               Comment
+            </button>
+            <button id="button_asc" onclick="sortComments(1)">
+              Sort by Date (Asc)
+            </button>
+            <button id="button_desc" onclick="sortComments(-1)">
+              Sort by Date (Desc)
             </button>
           </form>
         </div>
       </div>
     </div>
+    <!-- Add this line to include the moment.js library for date formatting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
