@@ -1,6 +1,8 @@
 let form = document.getElementById("comment_form");
 
 form.addEventListener("submit", function(event) {
+    
+  event.preventDefault();
   event.preventDefault();
   
   let fullName = document.getElementById("full_name").value;
