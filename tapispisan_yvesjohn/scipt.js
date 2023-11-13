@@ -1,11 +1,15 @@
 let nameInput = document.getElementById("name");
 let commentInput = document.getElementById("comment");
-let commentList = document.getElementById("add_comments")
-let addCommentButton = document.getElementById("comment_button")
+let commentList = document.getElementById("add_comments");
+let addCommentButton = document.getElementById("comment_button");
+let sortAscndButton = document.getElementById("sort_ascending");
+let sortDscndButton = document.getElementById("sort_descending");
     
 nameInput.addEventListener('input', validateForm);
 commentInput.addEventListener('input', validateForm);
-addCommentButton.addEventListener('click', addComment)
+addCommentButton.addEventListener('click', addComment);
+sortAscndButton.addEventListener('click', () => sortComments('asc'));
+sortDscndButton.addEventListener('click', () => sortComments('desc'));
 
 function validateForm() {
     let commentButton= document.getElementById("comment_button");
@@ -27,10 +31,38 @@ function addComment() {
 
     if (addName && addComment){
         let commentItem = document.createElement("p");
-        commentItem.innerHTML = `${addName} - ${addComment}`;
+        let currentDate = new Date();
+        let dateString = currentDate.toLocaleString();
+        commentItem.innerHTML = `${addName} - ${addComment} - ${dateString}`;
         commentList.appendChild(commentItem);
 
         addName = "";
         addComment = "";
     }
+}
+
+function sortComments(order) {
+    let comments = Array.from(commentList.children);
+    comments.sort((a, b) => {
+        let dateA = new Date(getCommentDate(a));
+        let dateB = new Date(getCommentDate(b));
+        return order === 'asc' ? dateA - dateB : dateB - dateA;
+    });
+
+    //clear current list
+    commentList.innerHTML="";
+
+    //append sorted comment
+    comments.forEach(comment => {
+        commentList.appendChild(comment);
+    });
+}
+
+function getCommentDate(comment) {
+    // get the date string from the comment content
+    let commentParts = comment.innerText.split('-');
+    if (commentParts.length > 2) {
+        return commentParts[2].trim();
+    }
+    return "";
 }
