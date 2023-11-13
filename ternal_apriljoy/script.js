@@ -2,7 +2,7 @@ function onInput() {
   let myName = document.getElementById("name");
   let myComment = document.getElementById("comment");
 
-  if (myName.value.length > 0 && myComment.value.length > 0) {
+  if (myName.value.length && myComment.value.length) {
     document.getElementById("comment_button").disabled = false;
   } else {
     document.getElementById("comment_button").disabled = true;
