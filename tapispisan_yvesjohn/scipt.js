@@ -19,8 +19,7 @@ function validateForm() {
 
     if (nameValue && commentValue) {
         commentButton.disabled=false;
-    }
-    else{
+    } else {
         commentButton.disabled=true;
     }
 }
@@ -58,7 +57,7 @@ function sortComments(order) {
     });
 
     //clear current list
-    commentList.innerHTML="";
+    commentList.innerHTML = "";
 
     //append sorted comment
     comments.forEach(comment => {
